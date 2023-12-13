@@ -18,6 +18,7 @@
 		F60E6FC12B28BB7200215822 /* NoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FC02B28BB7200215822 /* NoteUITestsLaunchTests.swift */; };
 		F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */; };
 		F60E6FD02B29918C00215822 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCF2B29918C00215822 /* Extensions.swift */; };
+		F60E6FD22B29A6B200215822 /* AlbumDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FD12B29A6B200215822 /* AlbumDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F60E6FC02B28BB7200215822 /* NoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F60E6FCF2B29918C00215822 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F60E6FD12B29A6B200215822 /* AlbumDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				F60E6FCF2B29918C00215822 /* Extensions.swift */,
 				F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */,
 				F60E6F9F2B28BB7100215822 /* SceneDelegate.swift */,
+				F60E6FD12B29A6B200215822 /* AlbumDetails.swift */,
 				F60E6FA12B28BB7100215822 /* ViewController.swift */,
 				F60E6FA32B28BB7100215822 /* Main.storyboard */,
 				F60E6FA62B28BB7200215822 /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60E6FD22B29A6B200215822 /* AlbumDetails.swift in Sources */,
 				F60E6FD02B29918C00215822 /* Extensions.swift in Sources */,
 				F60E6FA22B28BB7100215822 /* ViewController.swift in Sources */,
 				F60E6F9E2B28BB7100215822 /* AppDelegate.swift in Sources */,
