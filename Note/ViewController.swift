@@ -9,20 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    struct Album {
-        var imageURL: String
-        var name: String
-        var artistName: String
-    }
-    
     @IBOutlet weak var featuredAlbums: UICollectionView!
     
     
     @IBOutlet weak var recentReleases: UICollectionView!
     
-    var featured: [Album] = [Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas")]
+    var featured: [Album] = [Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas", id: "1"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas", id: "1"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas", id: "1"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas", id: "1")]
     
-    var recents: [Album] = [Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Illmatic", artistName: "Nas"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Illmatic", artistName: "Nas"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Illmatic", artistName: "Nas"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Illmatic", artistName: "Nas")]
+    var recents: [Album] = [Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a")]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -59,6 +53,19 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return UICollectionViewCell()
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AlbumDetailsViewController {
+            if let cell = sender as? UICollectionViewCell {
+                if let indexPath = featuredAlbums.indexPath(for: cell) {
+                    vc.data = featured[indexPath.row]
+                }
+            }
+            if let cell = sender as? UICollectionViewCell {
+                if let indexPath = recentReleases.indexPath(for: cell) {
+                    vc.data = recents[indexPath.row]
+                }
+            }
+        }
+    }
 }
 

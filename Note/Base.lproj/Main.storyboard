@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifR-V3-fS1">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -17,14 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Featured Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymq-D2-nyA">
-                                <rect key="frame" x="10" y="82" width="188" height="21"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fPs-8P-IEQ">
-                                <rect key="frame" x="0.0" y="123" width="393" height="170"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fPs-8P-IEQ">
+                                <rect key="frame" x="0.0" y="164" width="393" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="Hvc-KL-hEa"/>
@@ -61,6 +55,7 @@
                                         <size key="customSize" width="160" height="150"/>
                                         <connections>
                                             <outlet property="image" destination="Oa1-TQ-9m9" id="ssV-RM-rSs"/>
+                                            <segue destination="6Rn-pQ-mDB" kind="show" id="JHy-Nu-TsA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -70,13 +65,13 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Releases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y64-JU-C36">
-                                <rect key="frame" x="10" y="313" width="168.66666666666666" height="21"/>
+                                <rect key="frame" x="10" y="354" width="168.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t6M-L3-RrU">
-                                <rect key="frame" x="0.0" y="354" width="393" height="170"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t6M-L3-RrU">
+                                <rect key="frame" x="0.0" y="395" width="393" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="F4Y-dL-tyU"/>
@@ -113,6 +108,7 @@
                                         <size key="customSize" width="160" height="150"/>
                                         <connections>
                                             <outlet property="image" destination="403-bw-lfc" id="bTx-DY-SjD"/>
+                                            <segue destination="6Rn-pQ-mDB" kind="show" id="yrx-xd-8vs"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -121,23 +117,30 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="8Xn-R8-RSC"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymq-D2-nyA">
+                                <rect key="frame" x="10" y="123" width="179.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="t6M-L3-RrU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0tR-04-Qwb"/>
-                            <constraint firstItem="fPs-8P-IEQ" firstAttribute="top" secondItem="ymq-D2-nyA" secondAttribute="bottom" constant="20" id="2Ji-aX-wxA"/>
+                            <constraint firstItem="ymq-D2-nyA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5T9-VL-a0L"/>
                             <constraint firstItem="fPs-8P-IEQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7fD-6U-VSC"/>
-                            <constraint firstItem="ymq-D2-nyA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="IJN-sb-gC4"/>
                             <constraint firstItem="y64-JU-C36" firstAttribute="top" secondItem="fPs-8P-IEQ" secondAttribute="bottom" constant="20" id="MgY-TW-gvD"/>
                             <constraint firstItem="t6M-L3-RrU" firstAttribute="top" secondItem="y64-JU-C36" secondAttribute="bottom" constant="20" id="TP0-FF-HjM"/>
                             <constraint firstItem="t6M-L3-RrU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iqN-AG-w1U"/>
                             <constraint firstItem="ymq-D2-nyA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kaU-t2-pYC"/>
                             <constraint firstItem="fPs-8P-IEQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lu6-7e-VEZ"/>
                             <constraint firstItem="y64-JU-C36" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nHv-p0-RgL"/>
+                            <constraint firstItem="fPs-8P-IEQ" firstAttribute="top" secondItem="ymq-D2-nyA" secondAttribute="bottom" constant="20" id="vKf-h4-giJ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="xXU-X0-Qg1"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="featuredAlbums" destination="fPs-8P-IEQ" id="ATM-cq-ynY"/>
@@ -146,28 +149,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
         </scene>
-        <!--Album Details-->
+        <!--Album Details View Controller-->
         <scene sceneID="wbg-dh-M2n">
             <objects>
-                <viewController id="6Rn-pQ-mDB" customClass="AlbumDetails" sceneMemberID="viewController">
+                <viewController id="6Rn-pQ-mDB" customClass="AlbumDetailsViewController" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ao-me-LBd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgJ-Tc-CTf">
+                                <rect key="frame" x="76.666666666666686" y="130" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="FaJ-Bs-WHq"/>
+                                    <constraint firstAttribute="width" constant="240" id="rkQ-GA-cRs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="albumName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYe-Lb-3Kg">
+                                <rect key="frame" x="124.00000000000001" y="390" width="145.33333333333337" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozh-Wf-sDi">
+                                <rect key="frame" x="135.66666666666666" y="422" width="121.99999999999997" height="33"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="artistName"/>
+                                <buttonConfiguration key="configuration" style="plain" title="artistName">
+                                    <fontDescription key="titleFontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GMJ-IE-wAh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ozh-Wf-sDi" firstAttribute="top" secondItem="JYe-Lb-3Kg" secondAttribute="bottom" constant="8" id="3bi-L3-AsY"/>
+                            <constraint firstItem="ozh-Wf-sDi" firstAttribute="centerX" secondItem="1ao-me-LBd" secondAttribute="centerX" id="9wL-fC-UvS"/>
+                            <constraint firstItem="JYe-Lb-3Kg" firstAttribute="centerX" secondItem="1ao-me-LBd" secondAttribute="centerX" id="GYU-7X-mEx"/>
+                            <constraint firstItem="JYe-Lb-3Kg" firstAttribute="top" secondItem="bgJ-Tc-CTf" secondAttribute="bottom" constant="20" id="N9T-Sf-i0Y"/>
+                            <constraint firstItem="bgJ-Tc-CTf" firstAttribute="top" secondItem="GMJ-IE-wAh" secondAttribute="top" constant="27" id="Sy4-Iq-dxZ"/>
+                            <constraint firstItem="bgJ-Tc-CTf" firstAttribute="centerX" secondItem="1ao-me-LBd" secondAttribute="centerX" id="Vj9-50-B8D"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iv2-bh-auu"/>
+                    <navigationItem key="navigationItem" style="editor" id="iv2-bh-auu">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="5Ay-Cj-G5P"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="albumCover" destination="bgJ-Tc-CTf" id="iD5-mv-jz5"/>
+                        <outlet property="albumName" destination="JYe-Lb-3Kg" id="BHj-dP-QRu"/>
+                        <outlet property="artistName" destination="ozh-Wf-sDi" id="hQT-14-r9o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbc-M5-iw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="4"/>
+            <point key="canvasLocation" x="1910.6870229007632" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xdz-wg-sFD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ifR-V3-fS1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bSx-uL-BPQ" customClass="NavigationBar" customModule="Note" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BXI-rh-2bv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="In4-WX-TTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JHy-Nu-TsA"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -18,7 +18,9 @@
 		F60E6FC12B28BB7200215822 /* NoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FC02B28BB7200215822 /* NoteUITestsLaunchTests.swift */; };
 		F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */; };
 		F60E6FD02B29918C00215822 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCF2B29918C00215822 /* Extensions.swift */; };
-		F60E6FD22B29A6B200215822 /* AlbumDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FD12B29A6B200215822 /* AlbumDetails.swift */; };
+		F66F3A702B4079D1007DB381 /* AlbumDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A6F2B4079D1007DB381 /* AlbumDetailsViewController.swift */; };
+		F66F3A732B408CB8007DB381 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A722B408CB8007DB381 /* Album.swift */; };
+		F66F3A772B40A982007DB381 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A762B40A982007DB381 /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,9 @@
 		F60E6FC02B28BB7200215822 /* NoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F60E6FCF2B29918C00215822 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F60E6FD12B29A6B200215822 /* AlbumDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetails.swift; sourceTree = "<group>"; };
+		F66F3A6F2B4079D1007DB381 /* AlbumDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewController.swift; sourceTree = "<group>"; };
+		F66F3A722B408CB8007DB381 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		F66F3A762B40A982007DB381 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +109,18 @@
 		F60E6F9C2B28BB7100215822 /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				F66F3A712B408B58007DB381 /* Models */,
 				F60E6F9D2B28BB7100215822 /* AppDelegate.swift */,
 				F60E6FCF2B29918C00215822 /* Extensions.swift */,
 				F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */,
 				F60E6F9F2B28BB7100215822 /* SceneDelegate.swift */,
-				F60E6FD12B29A6B200215822 /* AlbumDetails.swift */,
+				F66F3A6F2B4079D1007DB381 /* AlbumDetailsViewController.swift */,
 				F60E6FA12B28BB7100215822 /* ViewController.swift */,
 				F60E6FA32B28BB7100215822 /* Main.storyboard */,
 				F60E6FA62B28BB7200215822 /* Assets.xcassets */,
 				F60E6FA82B28BB7200215822 /* LaunchScreen.storyboard */,
 				F60E6FAB2B28BB7200215822 /* Info.plist */,
+				F66F3A762B40A982007DB381 /* NavigationBar.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -134,6 +140,14 @@
 				F60E6FC02B28BB7200215822 /* NoteUITestsLaunchTests.swift */,
 			);
 			path = NoteUITests;
+			sourceTree = "<group>";
+		};
+		F66F3A712B408B58007DB381 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F66F3A722B408CB8007DB381 /* Album.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,12 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60E6FD22B29A6B200215822 /* AlbumDetails.swift in Sources */,
 				F60E6FD02B29918C00215822 /* Extensions.swift in Sources */,
 				F60E6FA22B28BB7100215822 /* ViewController.swift in Sources */,
 				F60E6F9E2B28BB7100215822 /* AppDelegate.swift in Sources */,
+				F66F3A772B40A982007DB381 /* NavigationBar.swift in Sources */,
 				F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */,
 				F60E6FA02B28BB7100215822 /* SceneDelegate.swift in Sources */,
+				F66F3A732B408CB8007DB381 /* Album.swift in Sources */,
+				F66F3A702B4079D1007DB381 /* AlbumDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JS472DFZ58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Note/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -481,6 +498,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JS472DFZ58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Note/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
