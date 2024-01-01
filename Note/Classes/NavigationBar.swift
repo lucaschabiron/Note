@@ -18,7 +18,6 @@ class NavigationBar: UINavigationBar {
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.label]
         self.tintColor = .label
         self.standardAppearance = appearance
-        self.scrollEdgeAppearance = appearance
     }
     
 }
