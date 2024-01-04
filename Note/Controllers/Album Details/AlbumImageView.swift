@@ -13,8 +13,6 @@ class AlbumImageView: UIImageView {
         super.awakeFromNib()
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.label.cgColor
     }
     /*
     // Only override draw() if you perform custom drawing.

@@ -40,8 +40,8 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-TQ-9m9">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="160" id="H9f-xT-JNd"/>
-                                                        <constraint firstAttribute="width" constant="160" id="axt-eT-DvC"/>
+                                                        <constraint firstAttribute="height" constant="160" id="DXU-hl-gMq"/>
+                                                        <constraint firstAttribute="width" constant="160" id="Lhd-vQ-lPn"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -93,8 +93,8 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="403-bw-lfc">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="160" id="B6a-Wn-1vf"/>
-                                                        <constraint firstAttribute="width" constant="160" id="wEL-Y0-mL3"/>
+                                                        <constraint firstAttribute="width" constant="160" id="YWF-Jv-5cP"/>
+                                                        <constraint firstAttribute="height" constant="160" id="jqi-eF-4FA"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -209,7 +209,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="albumCover" destination="bgJ-Tc-CTf" id="iD5-mv-jz5"/>
-                        <outlet property="albumName" destination="JYe-Lb-3Kg" id="BHj-dP-QRu"/>
+                        <outlet property="albumName" destination="JYe-Lb-3Kg" id="3EX-Ir-5Vw"/>
                         <outlet property="artistName" destination="ozh-Wf-sDi" id="hQT-14-r9o"/>
                     </connections>
                 </viewController>
@@ -217,30 +217,42 @@
             </objects>
             <point key="canvasLocation" x="1910.6870229007632" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist View Controller-->
         <scene sceneID="8VT-X5-KDf">
             <objects>
-                <viewController id="2k0-Ts-jMa" sceneMemberID="viewController">
+                <viewController id="2k0-Ts-jMa" customClass="ArtistViewController" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPR-c1-PxC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-JY-s0j">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-JY-s0j" customClass="ArtistIconImageView" customModule="Note" customModuleProvider="target">
                                 <rect key="frame" x="40" y="103" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="2wG-nH-fS6"/>
                                     <constraint firstAttribute="width" constant="140" id="7Nd-te-X6V"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pi-gc-6YF">
+                                <rect key="frame" x="200" y="203" width="177" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ea-LL-gCi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yZK-JY-s0j" firstAttribute="top" secondItem="7Ea-LL-gCi" secondAttribute="top" id="4iK-wh-qgQ"/>
+                            <constraint firstItem="4Pi-gc-6YF" firstAttribute="leading" secondItem="yZK-JY-s0j" secondAttribute="trailing" constant="20" id="TUT-jM-Ekh"/>
                             <constraint firstItem="yZK-JY-s0j" firstAttribute="leading" secondItem="7Ea-LL-gCi" secondAttribute="leading" constant="40" id="dHz-iL-y8R"/>
+                            <constraint firstItem="4Pi-gc-6YF" firstAttribute="top" secondItem="7Ea-LL-gCi" secondAttribute="top" constant="100" id="tcb-Ge-uwY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="RKW-E0-s7a"/>
+                    <connections>
+                        <outlet property="artistIcon" destination="yZK-JY-s0j" id="9yd-ZD-ckj"/>
+                        <outlet property="artistName" destination="4Pi-gc-6YF" id="OPa-3D-w41"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpe-c9-wpe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,7 +336,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JHy-Nu-TsA"/>
+        <segue reference="yrx-xd-8vs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">

@@ -9,9 +9,15 @@ import UIKit
 
 class ArtistViewController: UIViewController {
 
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var artistIcon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let artist = data {
+            artistName.text = artist.name
+            artistIcon.load(url: artist.imageURL)
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -25,5 +31,6 @@ class ArtistViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    var data: Artist?
 
 }

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct Album: Codable {
+    let title: String
+    let imageURL: String
+    let artist: String
+    // Add other album properties as needed
+}
+
+typealias AlbumCollection = [Album]

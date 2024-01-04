@@ -19,11 +19,16 @@
 		F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */; };
 		F60E6FD02B29918C00215822 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCF2B29918C00215822 /* Extensions.swift */; };
 		F66F3A702B4079D1007DB381 /* AlbumDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A6F2B4079D1007DB381 /* AlbumDetailsViewController.swift */; };
-		F66F3A732B408CB8007DB381 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A722B408CB8007DB381 /* Album.swift */; };
+		F66F3A732B408CB8007DB381 /* APIRecentAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A722B408CB8007DB381 /* APIRecentAlbums.swift */; };
 		F66F3A772B40A982007DB381 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A762B40A982007DB381 /* NavigationBar.swift */; };
 		F66F3A7A2B416CA9007DB381 /* AlbumImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A792B416CA9007DB381 /* AlbumImageView.swift */; };
 		F66F3A802B417619007DB381 /* RateAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A7F2B417619007DB381 /* RateAlbumViewController.swift */; };
 		F66F3A822B417678007DB381 /* StarReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A812B417678007DB381 /* StarReviewView.swift */; };
+		F66F3A852B42E990007DB381 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A842B42E990007DB381 /* ArtistViewController.swift */; };
+		F66F3A872B42EB11007DB381 /* ArtistIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A862B42EB11007DB381 /* ArtistIconImageView.swift */; };
+		F66F3A892B42FDDF007DB381 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A882B42FDDF007DB381 /* Artist.swift */; };
+		F66F3A8E2B45DD75007DB381 /* FetchAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A8D2B45DD75007DB381 /* FetchAlbums.swift */; };
+		F66F3A902B471060007DB381 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A8F2B471060007DB381 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +65,16 @@
 		F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F60E6FCF2B29918C00215822 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F66F3A6F2B4079D1007DB381 /* AlbumDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewController.swift; sourceTree = "<group>"; };
-		F66F3A722B408CB8007DB381 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		F66F3A722B408CB8007DB381 /* APIRecentAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRecentAlbums.swift; sourceTree = "<group>"; };
 		F66F3A762B40A982007DB381 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		F66F3A792B416CA9007DB381 /* AlbumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageView.swift; sourceTree = "<group>"; };
 		F66F3A7F2B417619007DB381 /* RateAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAlbumViewController.swift; sourceTree = "<group>"; };
 		F66F3A812B417678007DB381 /* StarReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarReviewView.swift; sourceTree = "<group>"; };
+		F66F3A842B42E990007DB381 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		F66F3A862B42EB11007DB381 /* ArtistIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistIconImageView.swift; sourceTree = "<group>"; };
+		F66F3A882B42FDDF007DB381 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		F66F3A8D2B45DD75007DB381 /* FetchAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAlbums.swift; sourceTree = "<group>"; };
+		F66F3A8F2B471060007DB381 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 		F60E6F9C2B28BB7100215822 /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				F66F3A8C2B45DD63007DB381 /* Calls */,
 				F66F3A7B2B41754E007DB381 /* Controllers */,
 				F66F3A782B416C45007DB381 /* Classes */,
 				F66F3A712B408B58007DB381 /* Models */,
@@ -149,7 +160,9 @@
 		F66F3A712B408B58007DB381 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F66F3A722B408CB8007DB381 /* Album.swift */,
+				F66F3A722B408CB8007DB381 /* APIRecentAlbums.swift */,
+				F66F3A882B42FDDF007DB381 /* Artist.swift */,
+				F66F3A8F2B471060007DB381 /* Album.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,8 +216,18 @@
 		F66F3A832B42E8D4007DB381 /* Artist */ = {
 			isa = PBXGroup;
 			children = (
+				F66F3A842B42E990007DB381 /* ArtistViewController.swift */,
+				F66F3A862B42EB11007DB381 /* ArtistIconImageView.swift */,
 			);
 			path = Artist;
+			sourceTree = "<group>";
+		};
+		F66F3A8C2B45DD63007DB381 /* Calls */ = {
+			isa = PBXGroup;
+			children = (
+				F66F3A8D2B45DD75007DB381 /* FetchAlbums.swift */,
+			);
+			path = Calls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,11 +367,16 @@
 				F60E6F9E2B28BB7100215822 /* AppDelegate.swift in Sources */,
 				F66F3A772B40A982007DB381 /* NavigationBar.swift in Sources */,
 				F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */,
+				F66F3A892B42FDDF007DB381 /* Artist.swift in Sources */,
+				F66F3A902B471060007DB381 /* Album.swift in Sources */,
 				F66F3A802B417619007DB381 /* RateAlbumViewController.swift in Sources */,
 				F60E6FA02B28BB7100215822 /* SceneDelegate.swift in Sources */,
 				F66F3A822B417678007DB381 /* StarReviewView.swift in Sources */,
-				F66F3A732B408CB8007DB381 /* Album.swift in Sources */,
+				F66F3A732B408CB8007DB381 /* APIRecentAlbums.swift in Sources */,
+				F66F3A872B42EB11007DB381 /* ArtistIconImageView.swift in Sources */,
+				F66F3A8E2B45DD75007DB381 /* FetchAlbums.swift in Sources */,
 				F66F3A702B4079D1007DB381 /* AlbumDetailsViewController.swift in Sources */,
+				F66F3A852B42E990007DB381 /* ArtistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,11 +556,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JS472DFZ58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Note/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -545,9 +575,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucaschabiron.Note;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -556,11 +589,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JS472DFZ58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Note/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -573,9 +608,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucaschabiron.Note;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

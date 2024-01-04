@@ -8,6 +8,14 @@
 import UIKit
 
 class ArtistIconImageView: UIImageView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 70
+        layer.masksToBounds = true
+    }
+    
+    
 
     /*
     // Only override draw() if you perform custom drawing.

@@ -14,18 +14,42 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var recentReleases: UICollectionView!
     
-    var featured: [Album] = [Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas", id: "1"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e022172b607853fa89cefa2beb4", name: "Future Nostalgia", artistName: "Dua Lipa", id: "2"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas", id: "1"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26", name: "Illmatic", artistName: "Nas", id: "1")]
+    var featured: AlbumCollection = []
+    var recents: AlbumCollection = []
     
-    var recents: [Album] = [Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a"),Album(imageURL: "https://i.scdn.co/image/ab67616d00001e027db8828819494cf6d0b79fc4", name: "Sincèrement", artistName: "Nas",id: "a")]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        fetchAlbums(endpoint: "/editorial/0/releases?limit=6") { albums, error in
+            DispatchQueue.main.async {
+                if let albums = albums {
+                    self.recents.append(contentsOf: albums)
+                   
+                    self.recentReleases.reloadData()
+
+                } else if error != nil {
+                    return
+                }
+            }
+        }
+        fetchAlbums(endpoint: "/chart/0/albums?limit=6") { albums, error in
+            DispatchQueue.main.async {
+                if let albums = albums {
+                    self.featured.append(contentsOf: albums)
+                    self.featuredAlbums.reloadData()
+                    
+                } else if error != nil {
+                    return
+                }
+            }
+        }
+
     }
 
 
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == featuredAlbums {
             return featured.count
@@ -33,6 +57,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             return recents.count
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        if collectionView == featuredAlbums {
+            for indexPath in indexPaths {
+                let album = featured[indexPath.row]
+                let _ = album.imageURL
+            }
+        } else {
+            for indexPath in indexPaths {
+                let album = recents[indexPath.row]
+                let _ = album.imageURL
+            }
+        }
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == featuredAlbums{

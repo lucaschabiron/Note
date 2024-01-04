@@ -8,14 +8,15 @@
 import UIKit
 
 class AlbumDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var albumName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let album = data {
             albumCover.load(url: album.imageURL)
-            albumName.text = album.name
-            artistName.setTitle(album.artistName, for: .normal)
+            albumName.text = album.title
+            artistName.setTitle(album.artist, for: .normal)
         }
 
         // Do any additional setup after loading the view.
@@ -23,8 +24,12 @@ class AlbumDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var albumCover: UIImageView!
-    @IBOutlet weak var albumName: UILabel!
-    
     @IBOutlet weak var artistName: UIButton!
     var data: Album?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ArtistViewController{
+            vc.data = Artist(imageURL: "", name: "", id: "")
+        }
+    }
 }
