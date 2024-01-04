@@ -166,10 +166,11 @@
                                     <constraint firstAttribute="width" constant="240" id="rkQ-GA-cRs"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="albumName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYe-Lb-3Kg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="albumName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYe-Lb-3Kg">
                                 <rect key="frame" x="124.00000000000001" y="390" width="145.33333333333337" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5yi-Py-rGU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5yi-Py-rGU"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="CMH-0R-cMc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="24"/>
                                 <nil key="textColor"/>

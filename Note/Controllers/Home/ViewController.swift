@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        fetchAlbums(endpoint: "/editorial/0/releases?limit=6") { albums, error in
+        fetchRecentAlbums(number: 6) { albums, error in
             DispatchQueue.main.async {
                 if let albums = albums {
                     self.recents.append(contentsOf: albums)
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        fetchAlbums(endpoint: "/chart/0/albums?limit=6") { albums, error in
+        fetchFeaturedAlbums(number: 6) { albums, error in
             DispatchQueue.main.async {
                 if let albums = albums {
                     self.featured.append(contentsOf: albums)

@@ -29,6 +29,7 @@
 		F66F3A892B42FDDF007DB381 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A882B42FDDF007DB381 /* Artist.swift */; };
 		F66F3A8E2B45DD75007DB381 /* FetchAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A8D2B45DD75007DB381 /* FetchAlbums.swift */; };
 		F66F3A902B471060007DB381 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A8F2B471060007DB381 /* Album.swift */; };
+		F66F3A922B471273007DB381 /* APIFeaturedAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A912B471273007DB381 /* APIFeaturedAlbums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F66F3A882B42FDDF007DB381 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F66F3A8D2B45DD75007DB381 /* FetchAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAlbums.swift; sourceTree = "<group>"; };
 		F66F3A8F2B471060007DB381 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		F66F3A912B471273007DB381 /* APIFeaturedAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFeaturedAlbums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				F66F3A722B408CB8007DB381 /* APIRecentAlbums.swift */,
 				F66F3A882B42FDDF007DB381 /* Artist.swift */,
 				F66F3A8F2B471060007DB381 /* Album.swift */,
+				F66F3A912B471273007DB381 /* APIFeaturedAlbums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				F60E6FA22B28BB7100215822 /* ViewController.swift in Sources */,
 				F66F3A7A2B416CA9007DB381 /* AlbumImageView.swift in Sources */,
 				F60E6F9E2B28BB7100215822 /* AppDelegate.swift in Sources */,
+				F66F3A922B471273007DB381 /* APIFeaturedAlbums.swift in Sources */,
 				F66F3A772B40A982007DB381 /* NavigationBar.swift in Sources */,
 				F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */,
 				F66F3A892B42FDDF007DB381 /* Artist.swift in Sources */,

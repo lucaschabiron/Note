@@ -7,21 +7,21 @@
 
 import Foundation
 
-struct AlbumsRes: Codable {
-    let data: [Datum]
+struct RecentAlbumsRes: Codable {
+    let data: [RecentDatum]
     let total: Int
     let next: String
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct RecentDatum: Codable {
     let id: Int
     let title: String
     let cover: String
     let coverSmall, coverMedium, coverBig, coverXl: String
     let md5Image, releaseDate: String
     let tracklist: String
-    let artist: ArtistRes
+    let artist: RecentArtistRes
     let type: String
 
     enum CodingKeys: String, CodingKey {
@@ -37,7 +37,7 @@ struct Datum: Codable {
 }
 
 // MARK: - ArtistRes
-struct ArtistRes: Codable {
+struct RecentArtistRes: Codable {
     let id: Int
     let name: String
     let tracklist: String
