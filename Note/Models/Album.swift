@@ -11,6 +11,7 @@ struct Album: Codable {
     let title: String
     let imageURL: String
     let artist: String
+    let artistId: Int
     // Add other album properties as needed
 }
 

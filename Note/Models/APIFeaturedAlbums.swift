@@ -66,4 +66,6 @@ enum ArtistType: String, Codable {
 
 enum RecordTypeEnum: String, Codable {
     case album = "album"
+    case ep = "ep"
+    case single = "single"
 }

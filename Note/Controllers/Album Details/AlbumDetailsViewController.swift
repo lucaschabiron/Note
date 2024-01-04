@@ -17,7 +17,16 @@ class AlbumDetailsViewController: UIViewController {
             albumCover.load(url: album.imageURL)
             albumName.text = album.title
             artistName.setTitle(album.artist, for: .normal)
+            
+            fetchArtist(id: album.artistId) { artistData,error  in
+                if let artist = artistData {
+                    self.preparedArtist = Artist(name: artist.name, imageURL: artist.imageURL, albums: [], id: artist.id)
+                } else {
+                    return
+                }
+            }
         }
+        
 
         // Do any additional setup after loading the view.
     }
@@ -26,10 +35,11 @@ class AlbumDetailsViewController: UIViewController {
     @IBOutlet weak var albumCover: UIImageView!
     @IBOutlet weak var artistName: UIButton!
     var data: Album?
+    var preparedArtist: Artist?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ArtistViewController{
-            vc.data = Artist(imageURL: "", name: "", id: "")
+            vc.data = self.preparedArtist
         }
     }
 }
