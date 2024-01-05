@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifR-V3-fS1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p77-k3-ZBH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -156,18 +158,18 @@
             <objects>
                 <viewController id="6Rn-pQ-mDB" customClass="AlbumDetailsViewController" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ao-me-LBd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgJ-Tc-CTf" customClass="AlbumImageView" customModule="Note" customModuleProvider="target">
-                                <rect key="frame" x="76.666666666666686" y="27" width="240" height="240"/>
+                                <rect key="frame" x="76.666666666666686" y="130" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="FaJ-Bs-WHq"/>
                                     <constraint firstAttribute="width" constant="240" id="rkQ-GA-cRs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="albumName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYe-Lb-3Kg">
-                                <rect key="frame" x="124.00000000000001" y="287" width="145.33333333333337" height="30"/>
+                                <rect key="frame" x="124.00000000000001" y="390" width="145.33333333333337" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5yi-Py-rGU"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="CMH-0R-cMc"/>
@@ -177,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozh-Wf-sDi">
-                                <rect key="frame" x="135.66666666666666" y="325" width="121.99999999999997" height="33"/>
+                                <rect key="frame" x="135.66666666666666" y="428" width="121.99999999999997" height="33"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="artistName"/>
@@ -223,11 +225,11 @@
             <objects>
                 <viewController id="2k0-Ts-jMa" customClass="ArtistViewController" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPR-c1-PxC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-JY-s0j" customClass="ArtistIconImageView" customModule="Note" customModuleProvider="target">
-                                <rect key="frame" x="40" y="0.0" width="140" height="140"/>
+                                <rect key="frame" x="40" y="103" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="2wG-nH-fS6"/>
                                     <constraint firstAttribute="width" constant="140" id="7Nd-te-X6V"/>
@@ -240,13 +242,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-Nj-RKg">
-                                <rect key="frame" x="10" y="170" width="65" height="17"/>
+                                <rect key="frame" x="10" y="273" width="65" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E3W-pP-n7Y">
-                                <rect key="frame" x="0.0" y="212" width="393" height="170"/>
+                                <rect key="frame" x="0.0" y="315" width="393" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="lUR-1L-vKq"/>
@@ -376,10 +378,85 @@
             </objects>
             <point key="canvasLocation" x="3020.6106870229005" y="3.5211267605633805"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="VNh-XH-qod">
+            <objects>
+                <tabBarController id="p77-k3-ZBH" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kb2-ga-BSr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ifR-V3-fS1" kind="relationship" relationship="viewControllers" id="d8p-Lg-KU5"/>
+                        <segue destination="n0B-oL-DkX" kind="relationship" relationship="viewControllers" id="DkR-0V-T1i"/>
+                        <segue destination="3Aq-fG-qhd" kind="relationship" relationship="viewControllers" id="cO6-bu-G06"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8o-KL-zud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1564" y="-551"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="BoS-2G-raH">
+            <objects>
+                <navigationController id="n0B-oL-DkX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="Jog-DB-na2">
+                        <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="medium"/>
+                        <color key="badgeColor" name="AccentColor"/>
+                        <imageReference key="selectedImage" image="magnifyingglass" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pac-1r-b1Y">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fcy-Ct-nct" kind="relationship" relationship="rootViewController" id="jEK-Jj-avP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mL5-pU-ao2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-331" y="-1183"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="7uz-WK-uDr">
+            <objects>
+                <navigationController id="3Aq-fG-qhd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="IYX-Ps-nzG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JSm-CX-DFa">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLB-E0-xzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-332" y="-1916"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aka-cZ-1ZY">
+            <objects>
+                <viewController id="fcy-Ct-nct" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="quR-r0-o8g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IjD-jg-iKy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dQ5-Kt-EYZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1F5-ki-lA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="-1183"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="xdz-wg-sFD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ifR-V3-fS1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="paW-2j-gKo">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="medium"/>
+                        <color key="badgeColor" name="AccentColor"/>
+                        <imageReference key="selectedImage" image="house.fill" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bSx-uL-BPQ" customClass="NavigationBar" customModule="Note" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -396,9 +473,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mgJ-G8-xkF"/>
+        <segue reference="JHy-Nu-TsA"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -10,8 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var featuredAlbums: UICollectionView!
-    
-    
     @IBOutlet weak var recentReleases: UICollectionView!
     
     var featured: AlbumCollection = []

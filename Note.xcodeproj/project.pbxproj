@@ -17,7 +17,7 @@
 		F60E6FBF2B28BB7200215822 /* NoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FBE2B28BB7200215822 /* NoteUITests.swift */; };
 		F60E6FC12B28BB7200215822 /* NoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FC02B28BB7200215822 /* NoteUITestsLaunchTests.swift */; };
 		F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */; };
-		F60E6FD02B29918C00215822 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCF2B29918C00215822 /* Extensions.swift */; };
+		F60E6FD02B29918C00215822 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E6FCF2B29918C00215822 /* LoadImage.swift */; };
 		F66F3A702B4079D1007DB381 /* AlbumDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A6F2B4079D1007DB381 /* AlbumDetailsViewController.swift */; };
 		F66F3A732B408CB8007DB381 /* APIRecentAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A722B408CB8007DB381 /* APIRecentAlbums.swift */; };
 		F66F3A772B40A982007DB381 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F3A762B40A982007DB381 /* NavigationBar.swift */; };
@@ -66,7 +66,7 @@
 		F60E6FBE2B28BB7200215822 /* NoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITests.swift; sourceTree = "<group>"; };
 		F60E6FC02B28BB7200215822 /* NoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		F60E6FCF2B29918C00215822 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F60E6FCF2B29918C00215822 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		F66F3A6F2B4079D1007DB381 /* AlbumDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewController.swift; sourceTree = "<group>"; };
 		F66F3A722B408CB8007DB381 /* APIRecentAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRecentAlbums.swift; sourceTree = "<group>"; };
 		F66F3A762B40A982007DB381 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -131,12 +131,12 @@
 		F60E6F9C2B28BB7100215822 /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				F6CD5DC42B486AEC0034B265 /* Utils */,
 				F66F3A8C2B45DD63007DB381 /* Calls */,
 				F66F3A7B2B41754E007DB381 /* Controllers */,
 				F66F3A782B416C45007DB381 /* Classes */,
 				F66F3A712B408B58007DB381 /* Models */,
 				F60E6F9D2B28BB7100215822 /* AppDelegate.swift */,
-				F60E6FCF2B29918C00215822 /* Extensions.swift */,
 				F60E6F9F2B28BB7100215822 /* SceneDelegate.swift */,
 				F60E6FA32B28BB7100215822 /* Main.storyboard */,
 				F60E6FA62B28BB7200215822 /* Assets.xcassets */,
@@ -237,6 +237,14 @@
 				F66F3A932B47162B007DB381 /* FetchArtist.swift */,
 			);
 			path = Calls;
+			sourceTree = "<group>";
+		};
+		F6CD5DC42B486AEC0034B265 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F60E6FCF2B29918C00215822 /* LoadImage.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,7 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60E6FD02B29918C00215822 /* Extensions.swift in Sources */,
+				F60E6FD02B29918C00215822 /* LoadImage.swift in Sources */,
 				F66F3A962B47188B007DB381 /* APIArtist.swift in Sources */,
 				F60E6FA22B28BB7100215822 /* ViewController.swift in Sources */,
 				F66F3A7A2B416CA9007DB381 /* AlbumImageView.swift in Sources */,
