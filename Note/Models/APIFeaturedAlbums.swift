@@ -22,8 +22,8 @@ struct FeaturedDatum: Codable {
     let recordType: RecordTypeEnum
     let tracklist: String
     let explicitLyrics: Bool
-    let position: Int
-    let artist: FeaturedArtistRes
+    let position: Int?
+    let artist: FeaturedArtistRes?
     let type: RecordTypeEnum
 
     enum CodingKeys: String, CodingKey {

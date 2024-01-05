@@ -27,7 +27,7 @@ func fetchRecentAlbums(number: Int, completion: @escaping ([Album]?, Error?) -> 
             
             let albumsResponse = try JSONDecoder().decode(RecentAlbumsRes.self, from: data)
             let cleanedData: AlbumCollection = albumsResponse.data.map { Datum in
-                return Album(title: Datum.title,imageURL: Datum.coverXl, artist: Datum.artist.name, artistId: Datum.artist.id)
+                return Album(title: Datum.title,imageURL: Datum.coverBig, artist: Datum.artist.name, artistId: Datum.artist.id, id: Datum.id)
                 
             }
             completion(cleanedData, nil)
@@ -57,7 +57,7 @@ func fetchFeaturedAlbums(number: Int, completion: @escaping ([Album]?, Error?) -
             
             let albumsResponse = try JSONDecoder().decode(FeaturedAlbumsRes.self, from: data)
             let cleanedData: AlbumCollection = albumsResponse.data.map { Datum in
-                return Album(title: Datum.title, imageURL: Datum.coverXl, artist: Datum.artist.name, artistId: Datum.artist.id)
+                return Album(title: Datum.title, imageURL: Datum.coverBig, artist: Datum.artist!.name, artistId: Datum.artist!.id, id: Datum.id)
                 
             }
             completion(cleanedData, nil)

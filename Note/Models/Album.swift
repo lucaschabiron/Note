@@ -12,7 +12,15 @@ struct Album: Codable {
     let imageURL: String
     let artist: String
     let artistId: Int
-    // Add other album properties as needed
+    let id: Int
 }
 
 typealias AlbumCollection = [Album]
+
+struct SimpleAlbum: Codable {
+    let title: String
+    let imageURL: String
+    let id: Int
+}
+
+typealias SimpleAlbumCollection = [SimpleAlbum]

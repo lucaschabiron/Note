@@ -26,7 +26,7 @@ func fetchArtist(id: Int, completion: @escaping (Artist?, Error?) -> Void) {
             let artistResponse = try JSONDecoder().decode(ArtistRes.self, from: data)
             
                                            
-            let cleanedData: Artist = Artist(name: artistResponse.name, imageURL: artistResponse.pictureXl, albums: [], id: id)
+            let cleanedData: Artist = Artist(name: artistResponse.name, imageURL: artistResponse.pictureBig, albums: [], id: id)
             completion(cleanedData, nil)
         } catch {
             completion(nil, error)
@@ -35,7 +35,7 @@ func fetchArtist(id: Int, completion: @escaping (Artist?, Error?) -> Void) {
 }
 
 
-func fetchArtistAlbums(id: Int, completion: @escaping (AlbumCollection?) -> Void) {
+func fetchArtistAlbums(id: Int, completion: @escaping (SimpleAlbumCollection?) -> Void) {
     guard let url = URL(string: "https://api.deezer.com/artist/\(id)/albums") else {
         completion(nil)
         return
@@ -47,8 +47,11 @@ func fetchArtistAlbums(id: Int, completion: @escaping (AlbumCollection?) -> Void
         if let data = data {
             do {
                 let albumsResponse = try decoder.decode(FeaturedAlbumsRes.self, from: data)
-                let cleanedData: AlbumCollection = albumsResponse.data.map { datum in
-                    return Album(title: datum.title, imageURL: datum.coverXl, artist: datum.artist.name, artistId: datum.artist.id)
+                var cleanedData: SimpleAlbumCollection = []
+                for album in albumsResponse.data {
+                    if album.recordType == RecordTypeEnum.album || album.recordType == RecordTypeEnum.ep {
+                        cleanedData.append(SimpleAlbum(title: album.title, imageURL: album.coverBig, id: album.id))
+                    }
                 }
                 
                 completion(cleanedData)
