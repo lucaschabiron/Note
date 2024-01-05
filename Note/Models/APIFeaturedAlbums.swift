@@ -68,4 +68,6 @@ enum RecordTypeEnum: String, Codable {
     case album = "album"
     case ep = "ep"
     case single = "single"
+    case track = "track"
+    case compile = "compile"
 }
