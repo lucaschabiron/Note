@@ -39,6 +39,7 @@
 		F6CD5DD62B499B930034B265 /* FetchSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD52B499B930034B265 /* FetchSearch.swift */; };
 		F6CD5DD82B499D300034B265 /* APISearchAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */; };
 		F6CD5DDA2B49C52B0034B265 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD92B49C52B0034B265 /* SearchTableViewCell.swift */; };
+		F6CD5DDD2B49D9220034B265 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DDC2B49D9220034B265 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F6CD5DD52B499B930034B265 /* FetchSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSearch.swift; sourceTree = "<group>"; };
 		F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISearchAlbums.swift; sourceTree = "<group>"; };
 		F6CD5DD92B49C52B0034B265 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		F6CD5DDC2B49D9220034B265 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				F6CD5DCE2B497DFA0034B265 /* ProfileViewController.swift */,
+				F6CD5DDC2B49D9220034B265 /* EditProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				F66F3A8E2B45DD75007DB381 /* FetchAlbums.swift in Sources */,
 				F66F3A702B4079D1007DB381 /* AlbumDetailsViewController.swift in Sources */,
 				F66F3A852B42E990007DB381 /* ArtistViewController.swift in Sources */,
+				F6CD5DDD2B49D9220034B265 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

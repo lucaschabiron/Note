@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  EditProfileViewController.swift
 //  Note
 //
 //  Created by Lucas Chabiron on 06/01/2024.
@@ -7,18 +7,13 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController {
 
-    @IBOutlet weak var profilePicture: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Profile"
-        
 
         // Do any additional setup after loading the view.
     }
-    
-    
     
 
     /*

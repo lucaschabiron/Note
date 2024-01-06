@@ -9,7 +9,7 @@ import Foundation
 
 func useSearch(query: String, completion: @escaping ([Album]?, Error?) -> Void) {
     
-    let url = URL(string: "https://api.deezer.com/search/album?q=\(query)&limit=10")!
+    let url = URL(string: "https://api.deezer.com/search/album?q=\(query)&limit=15")!
     
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
         let decoder = JSONDecoder()

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let resultsTable = UITableView()
     private var results: [Album] = []
+    var navController: UINavigationController?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
@@ -36,6 +37,8 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultsTable.delegate = self
+        resultsTable.dataSource = self
     }
     
     
@@ -50,6 +53,21 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         resultsTable.delegate = self
         resultsTable.dataSource = self
         view.addSubview(resultsTable)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let album = results[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "AlbumDetailsViewController") as? AlbumDetailsViewController {
+            vc.data = album
+
+            if let searchNavController = self.navController {
+                tableView.deselectRow(at: indexPath, animated: true)
+                searchNavController.pushViewController(vc, animated: true)
+            } else {
+                print("Error")
+            }
+        }
     }
     
     
@@ -67,8 +85,13 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
         title = "Search"
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self as? UISearchBarDelegate
-        navigationItem.searchController = searchController
         searchController.searchBar.placeholder = "Search for an Album"
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
+        let nav = navigationController
+        let resultsController = searchController.searchResultsController as! ResultsViewController
+        resultsController.navController = nav
         
     }
     
