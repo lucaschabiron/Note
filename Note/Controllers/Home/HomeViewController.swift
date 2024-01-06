@@ -6,18 +6,24 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var featuredAlbums: UICollectionView!
     @IBOutlet weak var recentReleases: UICollectionView!
+    var container: NSPersistentContainer!
     
     var featured: AlbumCollection = []
     var recents: AlbumCollection = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        container = appDelegate.persistentContainer
+        
+        
         fetchRecentAlbums(number: 6) { albums, error in
             DispatchQueue.main.async {
                 if let albums = albums {
@@ -47,7 +53,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == featuredAlbums {
             return featured.count
