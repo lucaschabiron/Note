@@ -25,8 +25,13 @@ class RateAlbumViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return 10
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row+1)"
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+
+            let label = UILabel()
+            label.text = "\(row+1)"
+            label.textAlignment = .center
+            label.font = UIFont(name: "Hiragino Mincho ProN W3", size: 18)
+            return label
     }
     
     override func viewDidLoad() {

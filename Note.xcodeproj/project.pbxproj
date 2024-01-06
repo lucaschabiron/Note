@@ -35,6 +35,7 @@
 		F6CD5DCA2B4877A60034B265 /* ReviewMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DC92B4877A60034B265 /* ReviewMethods.swift */; };
 		F6CD5DCC2B487FBE0034B265 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DCB2B487FBE0034B265 /* Reviews.swift */; };
 		F6CD5DCF2B497DFA0034B265 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DCE2B497DFA0034B265 /* ProfileViewController.swift */; };
+		F6CD5DD12B49918C0034B265 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD02B49918C0034B265 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		F6CD5DC92B4877A60034B265 /* ReviewMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMethods.swift; sourceTree = "<group>"; };
 		F6CD5DCB2B487FBE0034B265 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		F6CD5DCE2B497DFA0034B265 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F6CD5DD02B49918C0034B265 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				F66F3A7E2B4175E9007DB381 /* Rate Album */,
 				F66F3A7D2B41757A007DB381 /* Album Details */,
 				F66F3A7C2B417554007DB381 /* Home */,
+				F6CD5DD02B49918C0034B265 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				F6CD5DC72B486F160034B265 /* Note.xcdatamodeld in Sources */,
 				F66F3A902B471060007DB381 /* Album.swift in Sources */,
 				F66F3A802B417619007DB381 /* RateAlbumViewController.swift in Sources */,
+				F6CD5DD12B49918C0034B265 /* SearchViewController.swift in Sources */,
 				F60E6FA02B28BB7100215822 /* SceneDelegate.swift in Sources */,
 				F6CD5DCA2B4877A60034B265 /* ReviewMethods.swift in Sources */,
 				F6CD5DCC2B487FBE0034B265 /* Reviews.swift in Sources */,
