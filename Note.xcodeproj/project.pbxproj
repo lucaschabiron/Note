@@ -36,6 +36,9 @@
 		F6CD5DCC2B487FBE0034B265 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DCB2B487FBE0034B265 /* Reviews.swift */; };
 		F6CD5DCF2B497DFA0034B265 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DCE2B497DFA0034B265 /* ProfileViewController.swift */; };
 		F6CD5DD12B49918C0034B265 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD02B49918C0034B265 /* SearchViewController.swift */; };
+		F6CD5DD62B499B930034B265 /* FetchSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD52B499B930034B265 /* FetchSearch.swift */; };
+		F6CD5DD82B499D300034B265 /* APISearchAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */; };
+		F6CD5DDA2B49C52B0034B265 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD92B49C52B0034B265 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		F6CD5DCB2B487FBE0034B265 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		F6CD5DCE2B497DFA0034B265 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F6CD5DD02B49918C0034B265 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F6CD5DD52B499B930034B265 /* FetchSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSearch.swift; sourceTree = "<group>"; };
+		F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISearchAlbums.swift; sourceTree = "<group>"; };
+		F6CD5DD92B49C52B0034B265 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,7 @@
 				F66F3A912B471273007DB381 /* APIFeaturedAlbums.swift */,
 				F66F3A952B47188B007DB381 /* APIArtist.swift */,
 				F6CD5DCB2B487FBE0034B265 /* Reviews.swift */,
+				F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 			children = (
 				F60E6FCD2B28BE8300215822 /* CollectionViewCell.swift */,
 				F66F3A762B40A982007DB381 /* NavigationBar.swift */,
+				F6CD5DD92B49C52B0034B265 /* SearchTableViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -198,12 +206,12 @@
 		F66F3A7B2B41754E007DB381 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6CD5DD42B499B0D0034B265 /* Search */,
 				F6CD5DCD2B497DC50034B265 /* Profile */,
 				F66F3A832B42E8D4007DB381 /* Artist */,
 				F66F3A7E2B4175E9007DB381 /* Rate Album */,
 				F66F3A7D2B41757A007DB381 /* Album Details */,
 				F66F3A7C2B417554007DB381 /* Home */,
-				F6CD5DD02B49918C0034B265 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 			children = (
 				F66F3A8D2B45DD75007DB381 /* FetchAlbums.swift */,
 				F66F3A932B47162B007DB381 /* FetchArtist.swift */,
+				F6CD5DD52B499B930034B265 /* FetchSearch.swift */,
 			);
 			path = Calls;
 			sourceTree = "<group>";
@@ -273,6 +282,14 @@
 				F6CD5DCE2B497DFA0034B265 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F6CD5DD42B499B0D0034B265 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F6CD5DD02B49918C0034B265 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +425,7 @@
 			files = (
 				F60E6FD02B29918C00215822 /* LoadImage.swift in Sources */,
 				F66F3A962B47188B007DB381 /* APIArtist.swift in Sources */,
+				F6CD5DD82B499D300034B265 /* APISearchAlbums.swift in Sources */,
 				F60E6FA22B28BB7100215822 /* HomeViewController.swift in Sources */,
 				F66F3A7A2B416CA9007DB381 /* AlbumImageView.swift in Sources */,
 				F60E6F9E2B28BB7100215822 /* AppDelegate.swift in Sources */,
@@ -426,6 +444,8 @@
 				F66F3A732B408CB8007DB381 /* APIRecentAlbums.swift in Sources */,
 				F66F3A942B47162B007DB381 /* FetchArtist.swift in Sources */,
 				F66F3A872B42EB11007DB381 /* ArtistIconImageView.swift in Sources */,
+				F6CD5DDA2B49C52B0034B265 /* SearchTableViewCell.swift in Sources */,
+				F6CD5DD62B499B930034B265 /* FetchSearch.swift in Sources */,
 				F66F3A8E2B45DD75007DB381 /* FetchAlbums.swift in Sources */,
 				F66F3A702B4079D1007DB381 /* AlbumDetailsViewController.swift in Sources */,
 				F66F3A852B42E990007DB381 /* ArtistViewController.swift in Sources */,

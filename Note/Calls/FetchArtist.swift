@@ -23,6 +23,8 @@ func fetchArtist(id: Int, completion: @escaping (Artist?, Error?) -> Void) {
         
         do {
             
+            
+            
             let artistResponse = try JSONDecoder().decode(ArtistRes.self, from: data)
             
                                            
@@ -46,6 +48,7 @@ func fetchArtistAlbums(id: Int, completion: @escaping (SimpleAlbumCollection?) -
         
         if let data = data {
             do {
+                
                 let albumsResponse = try decoder.decode(FeaturedAlbumsRes.self, from: data)
                 var cleanedData: SimpleAlbumCollection = []
                 for album in albumsResponse.data {
