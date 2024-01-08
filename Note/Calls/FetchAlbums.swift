@@ -66,3 +66,29 @@ func fetchFeaturedAlbums(number: Int, completion: @escaping ([Album]?, Error?) -
         }
     }.resume()
 }
+
+func getAlbum(id: Int, completion: @escaping (Album?, Error?) -> Void){
+    let url = URL(string: "https://api.deezer.com/album/\(id)")!
+    
+    URLSession.shared.dataTask(with: url){ data, response, error in
+        if let error = error{
+            completion(nil, error)
+            return
+        }
+        
+        guard let data = data else {
+            completion(nil, NSError(domain: "", code: -1, userInfo: nil))
+            return
+        }
+        
+        do {
+            
+            let albumResponse = try JSONDecoder().decode(SingleAlbumRes.self, from: data)
+            let cleanedData: Album = Album(title: albumResponse.title, imageURL: albumResponse.coverBig, artist: albumResponse.artist.name, artistId: albumResponse.artist.id, id: albumResponse.id)
+            completion(cleanedData, nil)
+        } catch {
+            completion(nil, error)
+        }
+    }.resume()
+    
+}

@@ -60,10 +60,6 @@ struct FeaturedArtistRes: Codable {
     }
 }
 
-enum ArtistType: String, Codable {
-    case artist = "artist"
-}
-
 enum RecordTypeEnum: String, Codable {
     case album = "album"
     case ep = "ep"

@@ -9,21 +9,39 @@ import UIKit
 
 class EditProfileViewController: UIViewController {
 
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var profilePictureField: UITextField!
+    var prevData: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let data = prevData{
+            usernameField.text = data.userName
+            profilePictureField.text = data.profilePictureURL
+            
+        }
+        
+        
+        
+    }
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if sender as? UIBarButtonItem != saveButton { return }
+        
+        let username = usernameField.text ?? ""
+        let profilePictureURL = profilePictureField.text ?? ""
+        addUserProfile(userName: username, profilePictureURL: profilePictureURL)
+        
+        if let vc = segue.destination as? ProfileViewController{
+            vc.user = User(id: 0, userName: username, profilePictureURL: profilePictureURL)
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

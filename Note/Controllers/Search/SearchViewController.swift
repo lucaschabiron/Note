@@ -65,7 +65,6 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 tableView.deselectRow(at: indexPath, animated: true)
                 searchNavController.pushViewController(vc, animated: true)
             } else {
-                print("Error")
             }
         }
     }
@@ -112,7 +111,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
                 
                 
             } else{
-                print(error!)
             }
         }
         

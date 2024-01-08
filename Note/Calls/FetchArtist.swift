@@ -59,11 +59,9 @@ func fetchArtistAlbums(id: Int, completion: @escaping (SimpleAlbumCollection?) -
                 
                 completion(cleanedData)
             } catch {
-                print(error)
                 completion(nil)
             }
         } else if let error = error {
-            print(error)
             completion(nil)
         }
     }

@@ -40,6 +40,8 @@
 		F6CD5DD82B499D300034B265 /* APISearchAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */; };
 		F6CD5DDA2B49C52B0034B265 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DD92B49C52B0034B265 /* SearchTableViewCell.swift */; };
 		F6CD5DDD2B49D9220034B265 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DDC2B49D9220034B265 /* EditProfileViewController.swift */; };
+		F6CD5DDF2B49F32F0034B265 /* ProfileMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DDE2B49F32F0034B265 /* ProfileMethods.swift */; };
+		F6CD5DE32B4A2F080034B265 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD5DE22B4A2F080034B265 /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISearchAlbums.swift; sourceTree = "<group>"; };
 		F6CD5DD92B49C52B0034B265 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F6CD5DDC2B49D9220034B265 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		F6CD5DDE2B49F32F0034B265 /* ProfileMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMethods.swift; sourceTree = "<group>"; };
+		F6CD5DE22B4A2F080034B265 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 				F66F3A952B47188B007DB381 /* APIArtist.swift */,
 				F6CD5DCB2B487FBE0034B265 /* Reviews.swift */,
 				F6CD5DD72B499D300034B265 /* APISearchAlbums.swift */,
+				F6CD5DE22B4A2F080034B265 /* Users.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				F6CD5DC92B4877A60034B265 /* ReviewMethods.swift */,
+				F6CD5DDE2B49F32F0034B265 /* ProfileMethods.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				F60E6FCE2B28BE8400215822 /* CollectionViewCell.swift in Sources */,
 				F66F3A892B42FDDF007DB381 /* Artist.swift in Sources */,
 				F6CD5DC72B486F160034B265 /* Note.xcdatamodeld in Sources */,
+				F6CD5DDF2B49F32F0034B265 /* ProfileMethods.swift in Sources */,
 				F66F3A902B471060007DB381 /* Album.swift in Sources */,
 				F66F3A802B417619007DB381 /* RateAlbumViewController.swift in Sources */,
 				F6CD5DD12B49918C0034B265 /* SearchViewController.swift in Sources */,
@@ -445,6 +452,7 @@
 				F6CD5DCA2B4877A60034B265 /* ReviewMethods.swift in Sources */,
 				F6CD5DCC2B487FBE0034B265 /* Reviews.swift in Sources */,
 				F66F3A732B408CB8007DB381 /* APIRecentAlbums.swift in Sources */,
+				F6CD5DE32B4A2F080034B265 /* Users.swift in Sources */,
 				F66F3A942B47162B007DB381 /* FetchArtist.swift in Sources */,
 				F66F3A872B42EB11007DB381 /* ArtistIconImageView.swift in Sources */,
 				F6CD5DDA2B49C52B0034B265 /* SearchTableViewCell.swift in Sources */,

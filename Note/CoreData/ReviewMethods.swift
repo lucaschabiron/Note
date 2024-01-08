@@ -41,6 +41,7 @@ func addReview(review: Review, completion: @escaping (Bool) -> Void) {
         result.setValue(review.text, forKey: "review")
         result.setValue(review.date, forKey: "date")
         
+        
         do {
             try context.save()
             completion(true)
@@ -99,3 +100,75 @@ func getRating(albumId: Int) -> Int? {
     }
 }
 
+func getLatestReviewed() -> [Int]?{
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    
+    var reviews: ReviewList = []
+    
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Reviews")
+    
+    request.returnsObjectsAsFaults = false
+    
+    do {
+        let results = try context.fetch(request)
+        for result in results as! [NSManagedObject] {
+            let albumId = result.value(forKey: "albumId") as! Int
+            let rating = result.value(forKey: "rating") as! Int
+            let review = result.value(forKey: "review") as! String
+            let date = result.value(forKey: "date") as! Date
+            
+            let newReview = Review(albumId: albumId, rating: rating, text: review, date: date)
+            reviews.append(newReview)
+        }
+        reviews.sort(by: { $0.date.compare($1.date) == .orderedDescending })
+        let latestList = reviews.prefix(5)
+        var albumList: [Int] = []
+        for review in latestList {
+            albumList.append(review.albumId)
+        
+        }
+        print(albumList)
+        return albumList
+    }
+    catch {
+        return nil
+    }
+    
+}
+
+func getFavouriteAlbums() -> [Int]? {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    
+    var reviews: ReviewList = []
+    
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Reviews")
+    
+    request.returnsObjectsAsFaults = false
+    
+    do {
+        let results = try context.fetch(request)
+        for result in results as! [NSManagedObject] {
+            let albumId = result.value(forKey: "albumId") as! Int
+            let rating = result.value(forKey: "rating") as! Int
+            let review = result.value(forKey: "review") as! String
+            let date = result.value(forKey: "date") as! Date
+            
+            let newReview = Review(albumId: albumId, rating: rating, text: review, date: date)
+            reviews.append(newReview)
+        }
+        reviews.sort(by: { $0.rating > $1.rating })
+        let favouriteList = reviews.prefix(5)
+        var albumList: [Int] = []
+        for review in favouriteList {
+            albumList.append(review.albumId)
+        
+        }
+        print(albumList)
+        return albumList
+    }
+    catch {
+        return nil
+    }
+}

@@ -17,6 +17,7 @@ class AlbumDetailsViewController: UIViewController {
         }
     }
     
+    
     @IBOutlet weak var albumName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +69,9 @@ class AlbumDetailsViewController: UIViewController {
             if let rating = self.rating{
                 vc.previousRating = Int(rating)
             }
+        }
+        if let vc = segue.destination as? ProfileViewController{
+            vc.newRating = data
         }
     }
 }
