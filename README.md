@@ -19,6 +19,8 @@ To install Note on your iOS device, follow these steps:
 2. Open the project in Xcode.
 3. Build and run the application on your iOS device or simulator.
 
+## Preview
+
 <img src="https://github.com/lucaschabiron/Note/assets/84028247/e9e158a0-713f-4199-92ec-62c1590498b3" width="200" height="420" />
 <img src="https://github.com/lucaschabiron/Note/assets/84028247/57d594c3-b43e-4e48-92d0-dedc41d79175" width="200" height="420" />
 <img src="https://github.com/lucaschabiron/Note/assets/84028247/2a84f331-6265-42b8-ae9f-0ea21e08ca3d" width="200" height="420" />
