@@ -1,5 +1,5 @@
 # Note - Album Review App for iOS
-
+(Student project)
 ## Overview
 Note is an iOS application designed for music enthusiasts who wish to keep track of and write reviews for albums they listen to. The app uses the Deezer API to access their vast library of albums, providing users with detailed information and a seamless review experience.
 
